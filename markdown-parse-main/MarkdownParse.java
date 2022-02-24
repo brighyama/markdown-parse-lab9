@@ -10,16 +10,16 @@ public class MarkdownParse {
     static int findCloseParen(String markdown, int openParen) {
         int closeParen = openParen + 1;
         int openParenCount = 1;
-        if (markdown.indexOf(")", openParen) == -1) {
+        /** if (markdown.indexOf(")", openParen) == -1) {
             return -1;
-        }
+        }*/
         while (openParenCount > 0) {
             if (markdown.charAt(closeParen) == '(') {
                 openParenCount++;
             } else if (markdown.charAt(closeParen) == ')') {
                 openParenCount--;
             }
-            closeParen++;
+            //closeParen++;
         }
         return closeParen - 1;
 
